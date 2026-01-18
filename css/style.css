@@ -1,0 +1,85 @@
+body {
+    background-image: linear-gradient(
+        #63605f,
+        #000000
+    );
+    height: 100vh;
+    color: white;
+    font-family: sans-serif, Verdana, Geneva, Tahoma;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button {
+    background-color: inherit;
+    color: inherit;
+    border: none;
+}
+
+#below-cover {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3em 0 1em 0;
+}
+
+#button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.button {
+    font-size: 1.5em;
+}
+
+.button-navigate {
+    font-size: 3em;
+}
+
+.button-biggest {
+    font-size: 4em
+}
+
+#playlist-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1em 0 4em 0;
+}
+
+.spotify-cover {
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+#song-name {
+    font-size: 1.5em;
+    font-weight: bolder;
+    margin: 0 0 -0.5em 0;
+}
+
+.light-color {
+    color: rgb(165, 168, 170);
+}
+
+#progress-bar {
+    background-color: rgb(165, 168, 170);
+    height: 3px;
+    width: 100%;
+    border-radius: 15px;
+    margin: 0 0 1em 0;
+}
+
+#current-progress {
+    height: inherit;
+    width: 60%;
+    background-color: rgb(62, 13, 196);
+    border: inherit;
+}
