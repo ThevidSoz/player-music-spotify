@@ -1,3 +1,5 @@
+console.log('JS executando');
+
 const songName = document.getElementById('song-name');
 const bandName = document.getElementById('band-name');
 //const audio = document.getElementById('audio');
@@ -56,6 +58,7 @@ function playPauseDecider(){
 };
 
 function loadSong(){ 
+    
     cover.src = `img/${playlist[index].file}.jpg`;
     song.src = `sound/${playlist[index].songName}.mp3`;
     songName.innerText = playlist[index].songName; 
