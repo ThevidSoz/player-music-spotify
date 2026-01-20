@@ -8,6 +8,7 @@ const play = document.getElementById('pause');
 const cover = document.getElementById('cover');
 const next = document.getElementById('next');
 const previous = document.getElementById('previous');
+const like = document.getElementById("like");
 
 // Array com informacoes das musicas
 const reflactions = {
@@ -30,9 +31,22 @@ const luzDourada = {
 
 let isPlaying = false;
 
+let isLiked = false;
+
 const playlist = [reflactions, yourBody, luzDourada];
 let index = 0;
 
+function likeMusic() {
+    like.querySelector('.bi').classList.remove('bi-heart');
+    like.querySelector('.bi').classList.add('bi-heart-fill');
+    isLiked = true;
+};
+
+function deslikeMusic() {
+    like.querySelector('.bi').classList.remove('bi-heart-fill');
+    like.querySelector('.bi').classList.add('bi-heart');
+    isLiked = false;
+};
 
 function playSong() {
     play.querySelector('.bi').classList.remove('bi-play-circle-fill');
@@ -58,7 +72,6 @@ function playPauseDecider(){
 };
 
 function loadSong(){ 
-    
     cover.src = `img/${playlist[index].file}.jpg`;
     song.src = `sound/${playlist[index].songName}.mp3`;
     songName.innerText = playlist[index].songName; 
@@ -87,6 +100,16 @@ function nextSong() {
     playSong();
 };
 
+function likeDesliked() {
+    if (isLiked === true){
+        deslikeMusic();    
+    }
+    else{
+        likeMusic();
+    }
+};
+
 play.addEventListener('click', playPauseDecider);
 previous.addEventListener('click', previousSong);
 next.addEventListener('click', nextSong);
+like.addEventListener('click', likeDesliked);
