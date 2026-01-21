@@ -41,8 +41,8 @@ let isPlaying = false;
 let isShuffled = false;
 let repeatOn = false;
 
-const playlist = JSON.parse(localStorage.getItem('playlist'));
-// const playlist = [reflactions, beijoDeDevagar, encaixePerfeito];
+// const playlist = JSON.parse(localStorage.getItem('playlist'));
+const playlist = [reflactions, beijoDeDevagar, encaixePerfeito];
 let sortedPlaylist = [...playlist];
 
 let index = 1;
