@@ -30,10 +30,12 @@ body {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    margin-top: 1em;
 }
 
 .button {
     font-size: 1.5em;
+    cursor: pointer;
 }
 
 .button-navigate {
@@ -71,15 +73,32 @@ body {
 
 #progress-bar {
     background-color: rgb(165, 168, 170);
-    height: 3px;
+    height: 5px;
     width: 100%;
     border-radius: 15px;
-    margin: 0 0 1em 0;
 }
 
 #current-progress {
+    --progress: 0%;
     height: inherit;
-    width: 60%;
+    width: var(--progress);
     background-color: rgb(62, 13, 196);
     border: inherit;
+}
+
+.progress-container {
+    padding-bottom: 1em;
+    cursor: pointer;
+}
+
+.button-active {
+    color: rgb(62, 13, 196);
+}
+
+#time-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: smaller;
+    margin: 0.5em;
 }
